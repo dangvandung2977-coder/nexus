@@ -59,6 +59,12 @@ export async function getDashboardStats(): Promise<DashboardStats | null> {
   const listingData = listings as any[];
   const walletData = wallets as any[];
 
+  // Missing stats - placeholders for now to unbreak build
+  const totalTransactions = 0;
+  const todayCheckins = 0;
+  const todayDownloads = 0;
+  const pendingReports = 0;
+
   return {
     users: {
       total: profileData?.length || 0,
