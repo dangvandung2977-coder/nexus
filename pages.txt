@@ -1,0 +1,14 @@
+src/app/(auth)/login/page.tsx
+src/app/(auth)/signup/page.tsx
+src/app/(main)/creator/[username]/page.tsx
+src/app/(main)/explore/page.tsx
+src/app/(main)/listing/[slug]/page.tsx
+src/app/(main)/page.tsx
+src/app/dashboard/assets/page.tsx
+src/app/dashboard/listings/new/page.tsx
+src/app/dashboard/listings/page.tsx
+src/app/dashboard/listings/[id]/edit/page.tsx
+src/app/dashboard/messages/page.tsx
+src/app/dashboard/page.tsx
+src/app/dashboard/settings/page.tsx
+src/app/page.tsx
