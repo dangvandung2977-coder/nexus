@@ -175,11 +175,13 @@ export default async function ListingPage({ params }: Props) {
             </TabsList>
 
             <TabsContent value="description" className="mt-6">
-              <div className="border border-border rounded-xl bg-muted/30 p-6 max-h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20 hover:scrollbar-thumb-primary/40 transition-colors">
-                <div
-                  className="prose prose-sm prose-neutral dark:prose-invert max-w-none whitespace-pre-wrap"
-                  dangerouslySetInnerHTML={{ __html: listing.description }}
-                />
+              <div className="border-2 border-primary/20 rounded-xl bg-black/40 p-6 max-h-[700px] overflow-y-auto scrollbar-thin scrollbar-thumb-primary/30 hover:scrollbar-thumb-primary/50 transition-colors">
+                <pre 
+                  className="text-sm font-mono text-foreground leading-relaxed whitespace-pre-wrap break-words selection:bg-primary/30"
+                  style={{ fontFamily: 'var(--font-mono), monospace' }}
+                >
+                  {listing.description.replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]*>/g, '')}
+                </pre>
               </div>
             </TabsContent>
 
