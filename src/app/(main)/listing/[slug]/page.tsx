@@ -117,7 +117,7 @@ export default async function ListingPage({ params }: Props) {
               </div>
             </div>
 
-            <p className="text-muted-foreground leading-relaxed mb-4">
+            <p className="text-muted-foreground leading-relaxed mb-4 whitespace-pre-wrap">
               {listing.short_description}
             </p>
 
@@ -175,10 +175,12 @@ export default async function ListingPage({ params }: Props) {
             </TabsList>
 
             <TabsContent value="description" className="mt-6">
-              <div
-                className="prose prose-sm prose-neutral dark:prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: listing.description }}
-              />
+              <div className="border border-border rounded-xl bg-muted/30 p-6 max-h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20 hover:scrollbar-thumb-primary/40 transition-colors">
+                <div
+                  className="prose prose-sm prose-neutral dark:prose-invert max-w-none whitespace-pre-wrap"
+                  dangerouslySetInnerHTML={{ __html: listing.description }}
+                />
+              </div>
             </TabsContent>
 
             <TabsContent value="changelog" className="mt-6">

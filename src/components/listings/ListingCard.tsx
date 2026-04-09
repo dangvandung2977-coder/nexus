@@ -107,7 +107,7 @@ export function ListingCard({ listing, index = 0 }: ListingCardProps) {
         </Link>
 
         {/* Description */}
-        <p className="text-xs text-muted-foreground leading-relaxed mb-3 flex-1 line-clamp-2">
+        <p className="text-xs text-muted-foreground leading-relaxed mb-3 flex-1 line-clamp-2 whitespace-pre-wrap">
           {listing.short_description}
         </p>
 
